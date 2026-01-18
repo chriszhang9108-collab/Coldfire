@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冷火锻己 | Cold Fire</title>
+    <style>
+        /* --- 全局样式保持不变 --- */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* 改用 min-height 防止内容多了截断 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            color: #ffffff;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px 20px; /* 增加一些上下内边距 */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        /* --- 按钮组容器 --- */
+        .btn-group {
+            display: flex;
+            /* 修改：让内容垂直对齐，因为按钮和图片高度不一样 */
+            align-items: center; 
+            gap: 30px; /* 增加一点间距 */
+            justify-content: center;
+        }
+
+        /* --- 按钮样式 --- */
+        .btn {
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 15px 30px;
+            color: #ffffff;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: #020617;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* --- 新增：二维码图片样式 --- */
+        .qr-code {
+            width: 140px;  /* 设置宽度，高度会自动按比例缩放 */
+            height: auto;
+            border-radius: 4px; /* 一点点圆角 */
+            /* 给图片加一个精致的白边框和阴影，让它更有质感 */
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease; /* 加个鼠标放上去的小动效 */
+        }
+        
+        /* 鼠标悬停时，图片轻轻上浮 */
+        .qr-code:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- 手机端适配 --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            p.subtitle { font-size: 1rem; }
+            
+            .btn-group {
+                flex-direction: column; 
+                gap: 25px;
+                width: 100%;
+            }
+            .btn {
+                width: 80%; /* 手机上按钮不要太宽 */
+            }
+            /* 手机上二维码可以稍微大一点点 */
+            .qr-code {
+                width: 160px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div style="font-size: 14px; color: #64748b; margin-bottom: 20px; letter-spacing: 2px;">COLD FIRE PROJECT</div>
+        
+        <h1>夺回自我的掌控权</h1>
+        <p class="subtitle">一个关于复盘与成长的记录</p>
+        
+        <div class="btn-group">
+            <a href="https://mp.weixin.qq.com/s/t_a9U5lrD3tZciB4T4rM7w" class="btn" target="_blank">最新文章</a>
+            
+            <img src="https://mmbiz.qpic.cn/mmbiz_jpg/vTbuSokfdhRgzr6ia8Ticv2CLxXd7sHoaEIxVQ3Ig2H1ibZz53Ba4R8MrhicFevDx6DiaJQoPy8tz9dtum9ibCPaO4dw/640?wx_fmt=jpeg&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=29" alt="加入社群二维码" class="qr-code">
+        </div>
+        
+        <p style="font-size: 0.9rem; color: #64748b; margin-top: 20px;">扫码加入冷火计划社群</p>
+    </div>
+
+</body>
+</html>
