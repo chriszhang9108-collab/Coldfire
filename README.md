@@ -1,1 +1,5 @@
-The Cold Fire Project helps you understand yourself. There are no conspiracy theories or motivational platitudes here, only the reality after it has been dissected.
+# 小洛夜谈
+
+小洛夜谈是《猫游洛阳》宇宙下的夜间故事栏目，由橘小洛复盘城市故事、现实处境与自我安放。
+
+当前 GitHub Pages 项目路径为 `/Coldfire/`，首页入口为 `index.html`。
